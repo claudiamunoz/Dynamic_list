@@ -14,6 +14,19 @@ function Item() {
    var textcontent = document.createElement("empty");
 var deletebutton = document.createElement("button");
    document.getElementById("item").value = ""
+   deletebutton.textContent = "Remove Item";
+   deletebutton.className = "delete"
+   deletebutton.addEventListener("click", () => {
+       var target = deletebutton.parentElement;
+       target.remove();
+   });
+   textcontent.textContent = input + "";
+    li.appendChild(textcontent);
+li.appendChild(deletebutton);
+   list.appendChild(li);
+}
+
+
 
 
 
